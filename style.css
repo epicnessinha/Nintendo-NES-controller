@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(193, 123, 179);
+}
+
+.align {
+  top: 0;
+  left: 0;
+  height: auto;
+  width: auto;
+  object-fit: fill;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.controller {
+  min-width: 100vh;
+  height: 44vh;
+  background-color: #c9c6b7;
+  border-radius: 2vh;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.controller__body {
+  border-radius: 2vh;
+  height: 100%;
+  width: 100%;
+  flex-flow: row;
+  display: block;
+  background-color: #393d4e;
+  display: flex;
+  
+}
+.joystick__col {
+  margin: 1.5rem;
+  flex: 1;
+}
+.joystick-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.joystick-arrows__arrow {
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 20vh;
+  height: 7.5vh;
+  position: absolute;
+  border: 4px solid #b3afa9;
+  border-radius: 5px;
+}
+.joystick-arrows__arrow:first-child {
+  z-index: 1;
+  background: #3a4055;
+  background: linear-gradient(#202636,  #202636);
+}
+.joystick-arrows__arrow:first-child:before {
+  z-index: 1;
+  content: "";
+  height: 7.7vh;
+  width: 6vh;
+  display: block;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  right: 0;
+  bottom: 50%;
+  margin: 0 auto;
+  position: absolute;
+  background-color: #202636;
+}
+.joystick-arrows__arrow:last-child {
+  transform: translateY(-50%) rotate(90deg);
+  background: linear-gradient(#202636 96%, #080a13 96%);  
+}
+.joystick-arrows__center {
+  border-radius: 100%;
+  z-index: 1;
+  height: 4vh;
+  width: 4vh;
+  display: block;
+  background-color: #171c29;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  box-shadow: 0 5px 0 0 #070a13 inset;
+}
+.joystick-arrows__center:before {
+  left: 0;
+  right: 0; 
+}
+.joystick-options {
+  margin: 0;
+  flex-flow: column;
+  justify-content: space-between;
+  display: flex;
+}
+.joystick-options__bar {
+  border-radius: 0.8vh;
+  height: 5vh;
+  width: 100%;
+  background-color: #9a9c96;
+}
+.joystick-options__bar--large {
+  border: 1vh solid #a5a39a;
+  height: 9vh;
+  width: 100%;
+  background-color: #b8b6ae;
+}
+.joystick-options__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  padding: 2vh;
+  
+}
+.joystick-options__option {
+  height: 3vh;
+  border-radius: 1.5vh;
+  background-color: #202636;
+  width: 7.5vh;
+}
+.joystick__buttons {
+  align-items: flex-end;
+  justify-content: space-between;
+  display: flex;
+}
+.joystick-button {
+  height: 11vh;
+  width: 11vh;
+  border-radius: 1.4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c9c6b7;
+}
+.joystick-button__input {
+  border-radius: 100%;
+  height: 75%;
+  width: 75%;
+  background-color: #f9372b;
+}
